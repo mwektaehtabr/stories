@@ -1,0 +1,3 @@
+# LICENSE
+
+These stories are distributed under a [Creative Commons Attribution-NonCommercial 4.0 International license](https://creativecommons.org/licenses/by-nc/4.0/).
