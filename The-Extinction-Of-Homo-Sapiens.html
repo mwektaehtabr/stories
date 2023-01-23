@@ -1,0 +1,60 @@
+<html>
+ <head>
+  <title>The Extinction Of Homo Sapiens</title>
+  <style type="text/css">
+   p {
+    font-family: "Minion Pro", Minion, "Times New Roman", Times, serif;
+    font-size: 1.5em;
+    text-align: justify;
+    margin: 0.0em 3.0em 1.0em;
+   }
+   p.title {
+    font-size: 3.0em;
+    text-align: center;
+    margin: 3.0em 0.0em 1.0em;
+   }
+   p.sub {
+    text-align: center;
+    margin: 3.0em 0.0em 1.0em;
+   }
+   p.center {
+    text-align: center;
+    margin: 0.0em 9.0em 1.0em;
+   }
+   p.block {
+    margin: 0.0em 9.0em 1.0em;
+   }
+   a {
+    color: #000000;
+    text-decoration: none;
+   }
+   em, i {
+     font-style: italic;
+   }
+   sup {
+    line-height: 0;
+   }
+  </style>
+ </head>
+ <body>
+  <p class="title">The Extinction Of Homo Sapiens</p>
+  <p id="ext">My number one priority in life is myself.</p>
+  <script>
+   var counter = 0;
+   var statement = "My number one priority in life is ";
+   var extension = "that my number one priority in life is ";
+   var p = ["myself.", "my family.", "my friends.", "my work.", "my religion.", "my politics.", "my country.", "the planet."];
+   function extinction() {
+    if (counter < p.length) {
+     document.getElementById("ext").innerHTML = statement + p[counter];
+     counter++;
+    } else {
+     document.getElementById("ext").innerHTML = statement + extension + p[0];
+     statement += extension;
+     counter = 0;
+    }
+   }
+   setInterval(extinction, 2048);
+  </script>
+ </body>
+</html>
