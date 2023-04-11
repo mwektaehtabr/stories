@@ -1,0 +1,84 @@
+<html>
+ <head>
+  <title>Writer&rsquo;s Block</title>
+  <style type="text/css">
+   p {
+    font-family: "Minion Pro", Minion, "Times New Roman", Times, serif;
+    font-size: 1.5em;
+    text-align: left;
+    margin: 0.0em 3.0em 1.0em;
+    white-space: pre-wrap;
+   }
+   p.title {
+    font-size: 3.0em;
+    text-align: center;
+    margin: 3.0em 0.0em 1.0em;
+   }
+   p.sub {
+    text-align: center;
+    margin: 3.0em 0.0em 1.0em;
+   }
+   p.center {
+    text-align: center;
+    margin: 0.0em 9.0em 1.0em;
+   }
+   p.block {
+    margin: 0.0em 9.0em 1.0em;
+   }
+   a {
+    color: #000000;
+    text-decoration: none;
+   }
+   em, i {
+     font-style: italic;
+   }
+   sup {
+    line-height: 0;
+   }
+  </style>
+ </head>
+ <body>
+  <p class="title">Writer&rsquo;s Block</p>
+  <p id="page"></p>
+  <script>
+   document.addEventListener("keypress", function(event) {
+    switch(event.code) {
+     case "Quote":
+      event.preventDefault();
+      var prior = document.getElementById("page").innerHTML.slice(-1);
+      var priors = document.getElementById("page").innerHTML.slice(document.getElementById("page").innerHTML.length - 4);
+      if (event.shiftKey) {
+       if (prior == "" || prior == " " || prior == "(" || prior == "[" || prior == "{" || priors == "<br>") {
+        document.getElementById("page").innerHTML += "&ldquo;";
+       } else {
+        document.getElementById("page").innerHTML += "&rdquo;";
+       }
+      } else {
+       if (prior == "" || prior == " " || prior == "(" || prior == "[" || prior == "{" || priors == "<br>") {
+        document.getElementById("page").innerHTML += "&lsquo;";
+       } else {
+        document.getElementById("page").innerHTML += "&rsquo;";
+       }
+      }
+      break;
+     case "Slash":
+      if (!event.shiftKey) {
+       event.preventDefault();
+       document.getElementById("page").innerHTML += "&sol;";
+      } else {
+       document.getElementById("page").innerHTML += event.key;
+      }
+      break;
+     case "Enter":
+      document.getElementById("page").innerHTML += "<br>";
+      break;
+     case "Backspace":
+      event.preventDefault();
+      break;
+     default:
+      document.getElementById("page").innerHTML += event.key;
+    }
+   });
+  </script>
+ </body>
+</html>
