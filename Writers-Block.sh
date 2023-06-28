@@ -10,7 +10,6 @@ done
 printf "\e[?25l"
 echo "WRITER'S BLOCK"
 echo
-sleep 4
 while :; do
  read writer
  echo
