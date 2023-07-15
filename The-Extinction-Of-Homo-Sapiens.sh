@@ -21,16 +21,16 @@ printf "\e[?25l"
 echo "THE EXTINCTION OF HOMO SAPIENS"
 echo
 sleep 4
-echo -n $statement" "${priorities[$priority]}
+printf "$statement ${priorities[$priority]}"
 while :; do
  printf "\e[${#priorities[$priority]}D"
  printf "\e[0J"
  if [ $priority -eq ${#priorities} ]; then
   priority=0
-  echo -n $extension" "
+  printf "$extension "
  else
   priority=$(($priority+1))
  fi
- echo -n ${priorities[$priority]}
+ printf "${priorities[$priority]}"
  sleep 4
 done
