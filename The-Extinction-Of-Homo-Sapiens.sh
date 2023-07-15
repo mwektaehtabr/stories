@@ -4,9 +4,7 @@
 # by mwektaehtabr
 # distributed under a Creative Commons CC0 1.0 Universal Public Domain Dedication
 
-for data in statement extension priorities priority; do
- unset $data
-done
+unset statement extension priorities priority
 
 statement="My number one priority in life is"
 extension="that my number one priority in life is"
