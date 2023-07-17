@@ -15,7 +15,7 @@ stty -echo
 for number in {0..7}; do
  clear
 done
-printf "\e[?25l"
+printf "\33c\e[3J\e[?25l"
 echo "THE EXTINCTION OF HOMO SAPIENS"
 echo
 sleep 4
