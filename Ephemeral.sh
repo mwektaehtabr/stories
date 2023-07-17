@@ -4,9 +4,7 @@
 # by mwektaehtabr
 # distributed under a Creative Commons CC0 1.0 Universal Public Domain Dedication
 
-for data in cycle zero one two three section sections; do
- unset $data
-done
+unset cycle zero one two three section sections
 
 cycle=0
 zero=(16 32 32 64 16 32 16 64 16 32 64 8 8 8 8 64)
