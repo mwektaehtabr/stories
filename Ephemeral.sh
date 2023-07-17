@@ -32,7 +32,7 @@ writes () {
   *)
    ;;
  esac
- printf "\33c\e[3J\e[?25l"
+ printf "\ec\e[3J\e[?25l"
  echo "EPHEMERAL"
  echo
  if [ $section -lt 15 ]; then
@@ -53,7 +53,7 @@ stty -echo
 for number in {0..7}; do
  clear
 done
-printf "\33c\e[3J\e[?25l"
+printf "\ec\e[3J\e[?25l"
 echo "EPHEMERAL"
 echo
 sleep 4
