@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="utf-8">
   <style>
-   html, body, div, span, h1, p, a, i, em, b, ul, li, button, input {
+   html, body, div, span, h1, h2, p, a, i, em, b, ul, li {
     margin: 0;
     padding: 0;
     outline: 0;
@@ -20,21 +20,21 @@
     font-family: "Minion Pro", Minion, "Times New Roman", Times, serif;
     font-size: 16px;
    }
+   h1 {
+    font-size: 2.0em;
+    text-align: center;
+    margin: 2.0em 1.0em 1.0em;
+   }
+   h2 {
+    text-align: center;
+    margin: 2.0em 1.0em 1.0em;
+   }
    p {
     font-size: 1.0em;
     text-align: left;
     margin: 0.0em 1.0em 1.0em;
     white-space: pre-wrap;
-   }
-   .title {
-    font-size: 2.0em;
-    text-align: center;
-    margin: 2.0em 1.0em 1.0em;
-   }
-   .sub {
-    text-align: center;
-    margin: 2.0em 1.0em 1.0em;
-   }
+   }   
    .center {
     text-align: center;
    }
@@ -64,7 +64,7 @@
   </style>
  </head>
  <body>
-  <p class="title">Writer&rsquo;s Block</p>
+  <h1>Writer&rsquo;s Block</h1>
   <p id="page"></p>
   <script>
    document.addEventListener("keypress", function(event) {

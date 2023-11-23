@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="utf-8">
   <style>
-   html, body, div, span, h1, p, a, i, em, b, ul, li, button, input {
+   html, body, div, span, h1, h2, p, a, i, em, b, ul, li {
     margin: 0;
     padding: 0;
     outline: 0;
@@ -20,22 +20,25 @@
     font-family: "Minion Pro", Minion, "Times New Roman", Times, serif;
     font-size: 16px;
    }
-   p {
-    font-size: 1.0em;
-    text-align: justify;
-    margin: 0.0em 1.0em 1.0em;
-   }
-   .title {
+   h1 {
     font-size: 2.0em;
     text-align: center;
     margin: 2.0em 1.0em 1.0em;
    }
-   .sub {
+   h2 {
     text-align: center;
     margin: 2.0em 1.0em 1.0em;
    }
+   p {
+    font-size: 1.0em;
+    text-align: justify;
+    margin: 0.0em 1.0em 1.0em;
+   }   
    .center {
     text-align: center;
+   }
+   .strike {
+    text-decoration: line-through;
    }
    a {
     color: #000000;
@@ -63,7 +66,7 @@
   </style>
  </head>
  <body>
-  <p class="title">Ephemeral</p>
+  <h1>Ephemeral</h1>
   <div id="ephemeral"></div>
   <br>
   <script>
