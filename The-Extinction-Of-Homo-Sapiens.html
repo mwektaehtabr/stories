@@ -64,23 +64,21 @@
  </head>
  <body>
   <h1>The Extinction Of Homo Sapiens</h1>
-  <p id="ext">My number one priority in life is myself.</p>
+  <p id="i">My number one priority in life is myself.</p>
   <script>
-   var counter = 0;
-   var statement = "My number one priority in life is ";
-   var extension = "that my number one priority in life is ";
-   var p = ["myself.", "my family.", "my friends.", "my work.", "my religion.", "my politics.", "my country.", "the planet."];
-   function extinction() {
-    if (counter < p.length) {
-     document.getElementById("ext").innerHTML = statement + p[counter];
-     counter++;
+   var x = "My number one priority in life is ";
+   var y = "that my number one priority in life is ";
+   var _ = ["myself.", "my family.", "my friends.", "my work.", "my religion.", "my politics.", "my country.", "the planet."];
+   var $ = 0;
+   setInterval(() => {
+    if ($ < _.length) {
+     document.querySelector("#i").innerHTML = x + _[$++];
     } else {
-     document.getElementById("ext").innerHTML = statement + extension + p[0];
-     statement += extension;
-     counter = 0;
+     document.querySelector("#i").innerHTML = x + y + _[0];
+     x += y;
+     $ = 0;
     }
-   }
-   setInterval(extinction, 2048);
+   }, 2048);
   </script>
  </body>
 </html>
