@@ -65,44 +65,41 @@
  </head>
  <body>
   <h1>Writer&rsquo;s Block</h1>
-  <p id="page"></p>
+  <p id="i"></p>
   <script>
-   document.addEventListener("keypress", function(event) {
-    switch(event.code) {
+   document.addEventListener("keypress", e => {
+    switch(e.code) {
      case "Quote":
-      event.preventDefault();
-      var prior = document.getElementById("page").innerHTML.slice(-1);
-      var priors = document.getElementById("page").innerHTML.slice(document.getElementById("page").innerHTML.length - 4);
-      if (event.shiftKey) {
-       if (prior == "" || prior == " " || prior == "(" || prior == "[" || prior == "{" || priors == "<br>") {
-        document.getElementById("page").innerHTML += "&ldquo;";
-       } else {
-        document.getElementById("page").innerHTML += "&rdquo;";
-       }
+      e.preventDefault();
+      var _ = document.querySelector("#i").innerHTML.slice(-1);
+      var $ = document.querySelector("#i").innerHTML.slice(document.querySelector("#i").innerHTML.length - 4);
+      if (e.shiftKey) {
+       (_ == "" || _ == " " || _ == "(" || _ == "[" || _ == "{" || $ == "<br>") ? document.querySelector("#i").innerHTML += "&ldquo;" : document.querySelector("#i").innerHTML += "&rdquo;";
       } else {
-       if (prior == "" || prior == " " || prior == "(" || prior == "[" || prior == "{" || priors == "<br>") {
-        document.getElementById("page").innerHTML += "&lsquo;";
-       } else {
-        document.getElementById("page").innerHTML += "&rsquo;";
-       }
+       (_ == "" || _ == " " || _ == "(" || _ == "[" || _ == "{" || $ == "<br>") ? document.querySelector("#i").innerHTML += "&lsquo;" : document.querySelector("#i").innerHTML += "&rsquo;";
       }
       break;
      case "Slash":
-      if (!event.shiftKey) {
-       event.preventDefault();
-       document.getElementById("page").innerHTML += "&sol;";
+      if (!e.shiftKey) {
+       e.preventDefault();
+       document.querySelector("#i").innerHTML += "&sol;";
       } else {
-       document.getElementById("page").innerHTML += event.key;
+       document.querySelector("#i").innerHTML += e.key;
       }
       break;
      case "Enter":
-      document.getElementById("page").innerHTML += "<br>";
+      document.querySelector("#i").innerHTML += "<br>";
+      window.scrollTo(0,document.body.scrollHeight);
+      break;
+     case "Space":
+      e.preventDefault();
+      document.querySelector("#i").innerHTML += " ";
       break;
      case "Backspace":
-      event.preventDefault();
+      e.preventDefault();
       break;
      default:
-      document.getElementById("page").innerHTML += event.key;
+      document.querySelector("#i").innerHTML += e.key;
     }
    });
   </script>
