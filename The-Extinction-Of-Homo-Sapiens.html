@@ -64,7 +64,7 @@
  </head>
  <body>
   <h1>The Extinction Of Homo Sapiens</h1>
-  <p id="i">My number one priority in life is myself.</p>
+  <p>My number one priority in life is myself.</p>
   <script>
    var x = "My number one priority in life is ";
    var y = "that my number one priority in life is ";
@@ -72,9 +72,9 @@
    var $ = 0;
    setInterval(() => {
     if ($ < _.length) {
-     document.querySelector("#i").innerHTML = x + _[$++];
+     document.querySelector("p").innerHTML = x + _[$++];
     } else {
-     document.querySelector("#i").innerHTML = x + y + _[0];
+     document.querySelector("p").innerHTML = x + y + _[0];
      x += y;
      $ = 0;
     }

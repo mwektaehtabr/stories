@@ -65,41 +65,41 @@
  </head>
  <body>
   <h1>Writer&rsquo;s Block</h1>
-  <p id="i"></p>
+  <p></p>
   <script>
    document.addEventListener("keypress", e => {
     switch(e.code) {
      case "Quote":
       e.preventDefault();
-      var _ = document.querySelector("#i").innerHTML.slice(-1);
-      var $ = document.querySelector("#i").innerHTML.slice(document.querySelector("#i").innerHTML.length - 4);
+      var _ = document.querySelector("p").innerHTML.slice(-1);
+      var $ = document.querySelector("p").innerHTML.slice(document.querySelector("p").innerHTML.length - 4);
       if (e.shiftKey) {
-       (_ == "" || _ == " " || _ == "(" || _ == "[" || _ == "{" || $ == "<br>") ? document.querySelector("#i").innerHTML += "&ldquo;" : document.querySelector("#i").innerHTML += "&rdquo;";
+       (_ == "" || _ == " " || _ == "(" || _ == "[" || _ == "{" || $ == "<br>") ? document.querySelector("p").innerHTML += "&ldquo;" : document.querySelector("p").innerHTML += "&rdquo;";
       } else {
-       (_ == "" || _ == " " || _ == "(" || _ == "[" || _ == "{" || $ == "<br>") ? document.querySelector("#i").innerHTML += "&lsquo;" : document.querySelector("#i").innerHTML += "&rsquo;";
+       (_ == "" || _ == " " || _ == "(" || _ == "[" || _ == "{" || $ == "<br>") ? document.querySelector("p").innerHTML += "&lsquo;" : document.querySelector("p").innerHTML += "&rsquo;";
       }
       break;
      case "Slash":
       if (!e.shiftKey) {
        e.preventDefault();
-       document.querySelector("#i").innerHTML += "&sol;";
+       document.querySelector("p").innerHTML += "&sol;";
       } else {
-       document.querySelector("#i").innerHTML += e.key;
+       document.querySelector("p").innerHTML += e.key;
       }
       break;
      case "Enter":
-      document.querySelector("#i").innerHTML += "<br>";
+      document.querySelector("p").innerHTML += "<br>";
       window.scrollTo(0,document.body.scrollHeight);
       break;
      case "Space":
       e.preventDefault();
-      document.querySelector("#i").innerHTML += " ";
+      document.querySelector("p").innerHTML += " ";
       break;
      case "Backspace":
       e.preventDefault();
       break;
      default:
-      document.querySelector("#i").innerHTML += e.key;
+      document.querySelector("p").innerHTML += e.key;
     }
    });
   </script>
